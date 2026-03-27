@@ -1,0 +1,78 @@
+@use '../../styles/typography.scss' as *;
+@use '../../styles/variables.scss' as *;
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    width: 540px;
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+
+    }
+    &__title{
+        @include text-preset-2;
+        
+    }
+    &__subtitle{
+        @include text-preset-4;
+        color: rgba($color-dark-blue, 0.5)
+    }
+
+    &__list{
+        width: 100%;
+         border-top: 1px solid rgba($color-dark-blue, 0.14);
+    }
+    &__segment{
+        border-bottom: 1px solid rgba($color-dark-blue, 0.14);
+    }
+
+    &__question{
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 24px 16px 0;
+        cursor: pointer;
+        &:hover{
+            color: $color-red;
+        }
+        &--arrow{
+            transform: rotate(180deg);
+        }
+    }
+    &__answer{
+        @include text-preset-5-light;
+        padding-bottom: 16px;
+        color: rgba($color-dark-blue, 0.75);
+
+    }
+}
+
+@media (max-width: 768px) {
+    .faq{
+        width: 311px;
+        &__question{
+            padding-right: 0;
+        }
+         &__title{
+            font-size: 30px;
+            line-height: 1.35;
+        
+        }
+         &__list{
+         border-top: 0;
+        }
+        &__answer{
+            font-size: 15px;
+            line-height: 1.65;
+        }
+        
+    }
+
+
+
+}

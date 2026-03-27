@@ -1,0 +1,68 @@
+@use '../../styles/typography.scss' as *;
+@use '../../styles/variables.scss' as *;
+
+
+.form {
+    display: flex;
+    align-items: flex-start; // so button doesn't stretch when error message appears
+    gap: 1rem;
+
+    &__field {
+        display: flex;
+        flex-direction: column; // stack input-wrapper + error message vertically
+        border: 2px solid $color-white;
+
+        &:focus-within{
+            border: 2px solid $color-red;
+            border-radius: 5px;
+        }
+
+        &--error {
+            border: 2px solid $color-red;
+            border-radius: 5px;
+            background-color: $color-red;
+        }
+    }
+
+    &__input-wrapper {
+        position: relative; // needed to absolutely position the ! icon
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        padding: 24px 8px;
+        width: 300px;
+        border: none;
+        border-radius: 5px;
+        background-color: $color-white;
+
+        &::placeholder {
+            @include text-preset-6-regular;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $color-red;
+        color: $color-white;
+        font-weight: bold;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    }
+
+    &__error {
+        margin: 0;
+        padding: 6px 8px;
+        color: $color-white;
+        font-style: italic;
+        font-size: 14px;
+    }
+}

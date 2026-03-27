@@ -1,0 +1,32 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles//typography.scss" as *;
+
+.tabs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__selection{
+        display: flex;
+        
+    }
+    &__tab{
+        @include text-preset-5-regular;
+        width: 243px;
+        padding-bottom: 24px;
+        text-align: center;
+        cursor: pointer;
+        color: rgba($color-dark-blue, 0.75);
+        // Only apply hover if NOT active
+        &:not(&--active):hover {
+            color: $color-red;
+        }
+        &--active{
+            border-bottom: 4px solid $color-red;
+            color: $color-dark-blue;
+            &:hover{
+                color: $color-dark-blue;
+            }
+        }
+    }
+}
+   

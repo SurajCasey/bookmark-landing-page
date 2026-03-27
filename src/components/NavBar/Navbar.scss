@@ -1,0 +1,72 @@
+@use '../../styles/variables.scss' as * ;
+@use '../../styles/typography.scss' as * ;
+
+.navbar{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 165px;
+
+    
+    &__logo{
+        width: auto;
+        align-items: center;
+        
+    }
+    &__menu{
+        display: flex;
+        gap: 48px;
+       
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;    
+        gap: 48px;
+        li{
+            list-style: none;
+            text-transform: uppercase;
+        }
+        a{
+            @include text-preset-6-regular;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }   
+
+    &__hamburger{
+        display:none;
+    }
+
+}
+
+@media (max-width: 944px) {
+    .navbar{
+        margin-inline: 80px;
+
+        &__menu{
+            display: none;
+        }
+        &__hamburger{
+            display: block;
+            cursor: pointer;
+        }
+        &__button{
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width:430px ){
+    .navbar{
+        margin-inline: 32px;
+    }
+}
