@@ -2,9 +2,9 @@
 This is the frontend mentor project made for frontend challenge purpose.
 
 ```js
-npm install
+Install node modules
 
-## Using Typescript + Scss
+npm install
 
 
 
