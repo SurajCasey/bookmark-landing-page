@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     margin-inline: 165px;
-
+    margin-top: 48px;
     
     &__logo{
         width: auto;
@@ -48,6 +48,7 @@
 @media (max-width: 944px) {
     .navbar{
         margin-inline: 80px;
+        margin-top: 40px;
 
         &__menu{
             display: none;

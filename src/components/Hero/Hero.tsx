@@ -30,11 +30,11 @@ const Hero = () => {
             />
         </div>
     </div>
-    <div className="hero__image">
-        <HeroImg/>
-        <span className="hero__background">
-
-        </span>
+    <div className="hero__imagecontainer">
+        <HeroImg className="hero__image"/>
+        <div className="hero__background">
+            
+        </div>
     </div>
 </section>
     
